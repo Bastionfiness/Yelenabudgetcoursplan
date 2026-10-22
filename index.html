@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ma Liberté Financière — Cours & Outils</title>
+<style>
+:root{--navy:#0b3d62;--blue:#1f4e79;--gold:#e0a800;--bg:#f4f7fa;--card:#fff;--green:#1e8e5a;--red:#c0392b}
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:var(--bg);color:#222;line-height:1.55}
+header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:44px 20px;text-align:center}
+header h1{margin:0;font-size:2.1rem}
+header p{opacity:.9;max-width:760px;margin:10px auto 0}
+nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #dde5ec;display:flex;gap:6px;overflow-x:auto;padding:10px 14px;z-index:10}
+nav a{white-space:nowrap;text-decoration:none;color:var(--navy);font-weight:600;padding:8px 12px;border-radius:20px;cursor:pointer}
+nav a:hover,nav a.active{background:#eaf2f8}
+main{max-width:1050px;margin:auto;padding:24px 16px 70px}
+section.page{display:none;background:var(--card);border-radius:14px;padding:26px;margin-bottom:26px;box-shadow:0 2px 10px rgba(15,40,70,.07)}
+section.page.active{display:block}
+h2{color:var(--navy);margin-top:0;border-left:5px solid var(--gold);padding-left:12px}
+h3{color:var(--blue)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:16px}
+.callout{background:#fff8e1;border-left:5px solid var(--gold);padding:14px 16px;border-radius:8px;margin:14px 0}
+.danger{background:#fdecea;border-left:5px solid var(--red)}
+.success{background:#e8f6ef;border-left:5px solid var(--green)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.95rem}
+th{background:var(--navy);color:#fff;text-align:left}
+th,td{padding:10px;border:1px solid #d7e0e8}
+tr:nth-child(even) td{background:#f7fafc}
+label{display:block;font-weight:600;margin:10px 0 4px}
+input,select{width:100%;padding:10px;border:1px solid #c9d4de;border-radius:8px;font-size:1rem}
+button{background:var(--navy);color:#fff;border:0;padding:11px 18px;border-radius:8px;font-weight:700;cursor:pointer;margin-top:12px}
+button:hover{background:#09304d}
+.result{background:#eaf2f8;border-radius:10px;padding:14px;margin-top:14px;font-size:1.05rem}
+.result b{color:var(--navy)}
+.check{display:flex;align-items:center;gap:10px;background:#f8fafc;border:1px solid #e2e8f0;padding:10px 12px;border-radius:8px;margin:7px 0}
+.check input{width:auto}
+.check.done label{text-decoration:line-through;color:#777}
+.progress{height:12px;background:#e2e8f0;border-radius:10px;overflow:hidden;margin:10px 0}
+.progress div{height:100%;background:var(--green);width:0;transition:.3s}
+footer{text-align:center;color:#667;font-size:.9rem;padding:25px}
+@media(max-width:640px){header h1{font-size:1.6rem}}
+</style>
+</head>
+<body>
+<header>
+<h1>Ma Liberté Financière</h1>
+<p>Cours personnel, calculateurs et plan d’action pour gérer mon budget, me protéger, investir régulièrement et laisser le temps travailler.</p>
+</header>
+
+<nav id="menu">
+<a data-page="cours" class="active">Cours</a>
+<a data-page="budget">Budget</a>
+<a data-page="securite">Sécurité</a>
+<a data-page="interets">Intérêts composés</a>
+<a data-page="dca">Investissement DCA</a>
+<a data-page="dettes">Dettes</a>
+<a data-page="plan">Plan 90 jours</a>
+</nav>
+
+<main>
+
+<section id="cours" class="page active">
+<h2>1. Les bases à retenir</h2>
+<p>La liberté financière ne vient pas d’une astuce secrète. Elle vient d’un système répété : connaître ses chiffres, automatiser son épargne, se protéger, éviter les dettes toxiques et investir sur le long terme.</p>
+<div class="callout"><b>Règle centrale :</b> ce n’est pas seulement ce que je gagne qui compte, mais ce que je garde, ce que j’investis et ce que je laisse travailler dans le temps.</div>
+<div class="grid">
+<div class="card"><h3>1. Diagnostic</h3>Je regarde mes 3 derniers relevés bancaires et j’identifie mes revenus, dépenses fixes, dépenses variables et fuites d’argent.</div>
+<div class="card"><h3>2. Sécurité</h3>Je construis 3 à 6 mois de dépenses essentielles sur un Livret A ou LDDS avant d’investir.</div>
+<div class="card"><h3>3. Investissement</h3>J’investis une somme fixe chaque mois dans un support diversifié, avec un horizon d’au moins 5 à 10 ans.</div>
+<div class="card"><h3>4. Patience</h3>Les intérêts composés font travailler mes gains. Le temps est l’un de mes meilleurs alliés.</div>
+</div>
+<h3>La règle 50/30/20</h3>
+<table>
+<tr><th>Catégorie</th><th>Part</th><th>Exemples</th></tr>
+<tr><td>Besoins essentiels</td><td>50 %</td><td>Loyer, nourriture, transport, factures, assurances</td></tr>
+<tr><td>Plaisirs</td><td>30 %</td><td>Restaurants, sorties, abonnements, voyages</td></tr>
+<tr><td>Épargne / investissement</td><td>20 %</td><td>Livret, PEA, CTO, remboursement de dettes</td></tr>
+</table>
+<p>Si mes charges sont élevées, je peux commencer avec 60/25/15. L’important est de fixer un taux d’épargne automatique et de l’augmenter progressivement.</p>
+<h3>Ma méthode en une page</h3>
+<ol>
+<li>Je connais mes revenus et mes dépenses.</li>
+<li>J’automatise une part de mon revenu vers l’épargne.</li>
+<li>Je construis 3 à 6 mois de sécurité sur un livret.</li>
+<li>J’élimine les dettes coûteuses et les abonnements inutiles.</li>
+<li>J’ouvre un PEA et j’investis régulièrement dans un ETF diversifié.</li>
+<li>Je laisse le temps et les intérêts composés travailler.</li>
+<li>Je révise mon système une fois par mois, sans paniquer à chaque baisse.</li>
+</ol>
+<div class="callout success"><b>Ma phrase de référence :</b> commencer petit, automatiser, sécuriser, investir régulièrement, puis laisser le temps travailler.</div>
+</section>
+
+<section id="budget" class="page">
+<h2>2. Calculateur de budget</h2>
+<p>Entrez vos montants mensuels pour connaître votre capacité d’épargne et votre répartition 50/30/20.</p>
+<div class="grid">
+<div class="card">
+<label>Revenus nets mensuels (€)</label><input type="number" id="rev" value="2000">
+<label>Loyer / logement (€)</label><input type="number" id="loyer" value="650">
+<label>Factures fixes (€)</label><input type="number" id="factures" value="160">
+<label>Crédits (€)</label><input type="number" id="credits" value="180">
+<label>Abonnements (€)</label><input type="number" id="abos" value="40">
+<label>Dépenses variables (€)</label><input type="number" id="variables" value="700">
+<button onclick="calcBudget()">Calculer mon budget</button>
+</div>
+<div class="card">
+<div class="result" id="budgetResult">Remplissez vos montants puis cliquez sur « Calculer mon budget ».</div>
+<table id="budgetTable" style="display:none">
+<tr><th>Catégorie</th><th>Cible 50/30/20</th><th>Votre situation</th></tr>
+<tr><td>Besoins essentiels</td><td id="c50">—</td><td id="r50">—</td></tr>
+<tr><td>Plaisirs</td><td id="c30">—</td><td id="r30">—</td></tr>
+<tr><td>Épargne / investissement</td><td id="c20">—</td><td id="r20">—</td></tr>
+</table>
+</div>
+</div>
+</section>
+
+<section id="securite" class="page">
+<h2>3. Mon matelas de sécurité</h2>
+<p>Avant d’investir, je dois détenir une réserve disponible en cas d’imprévu. Elle doit rester sur un livret sécurisé, pas en bourse.</p>
+<div class="grid">
+<div class="card">
+<label>Dépenses essentielles mensuelles (€)</label><input type="number" id="depSecu" value="1030">
+<label>Mois de sécurité souhaités</label>
+<select id="moisSecu"><option value="3">3 mois</option><option value="4">4 mois</option><option value="5">5 mois</option><option value="6" selected>6 mois</option></select>
+<label>Épargne déjà disponible (€)</label><input type="number" id="epargneActuelle" value="0">
+<label>Épargne mensuelle possible (€)</label><input type="number" id="epargneMensuelle" value="200">
+<button onclick="calcSecu()">Calculer mon objectif</button>
+</div>
+<div class="card"><div class="result" id="secuResult">Indiquez vos dépenses essentielles pour calculer votre objectif.</div></div>
+</div>
+<div class="callout danger"><b>Erreur à éviter :</b> mettre mon épargne de précaution en bourse. Les marchés peuvent baisser au moment où j’ai besoin de cet argent.</div>
+</section>
+
+<section id="interets" class="page">
+<h2>4. Intérêts composés</h2>
+<p>Ce simulateur montre l’effet du temps sur un capital initial et des versements mensuels réguliers.</p>
+<div class="grid">
+<div class="card">
+<label>Capital initial (€)</label><input type="number" id="capital" value="1000">
+<label>Versement mensuel (€)</label><input type="number" id="versement" value="200">
+<label>Rendement annuel estimé (%)</label><input type="number" id="rendement" value="7" step="0.1">
+<label>Durée (années)</label><input type="number" id="annees" value="20">
+<button onclick="calcInterets()">Simuler</button>
+</div>
+<div class="card"><div class="result" id="interetsResult">Entrez vos hypothèses pour visualiser la croissance de votre capital.</div></div>
+</div>
+<div class="callout">Les intérêts composés signifient que mes gains produisent eux-mêmes des gains. Plus je commence tôt, plus l’effet du temps est important.</div>
+</section>
+
+<section id="dca" class="page">
+<h2>5. Plan d’investissement DCA</h2>
+<p>Le DCA consiste à investir la même somme à intervalles réguliers, sans essayer de prédire le marché. Cela réduit le risque de tout investir au pire moment.</p>
+<div class="grid">
+<div class="card">
+<label>Versement mensuel (€)</label><input type="number" id="dcaMontant" value="200">
+<label>Prix actuel de la part / ETF (€)</label><input type="number" id="dcaPrix" value="100" step="0.01">
+<label>Horizon (années)</label><input type="number" id="dcaAnnees" value="20">
+<label>Rendement annuel estimé (%)</label><input type="number" id="dcaRendement" value="7" step="0.1">
+<button onclick="calcDCA()">Calculer mon plan</button>
+</div>
+<div class="card"><div class="result" id="dcaResult">Calculez le total versé, les parts estimées et la valeur projetée.</div></div>
+</div>
+<div class="callout danger"><b>Règle :</b> je n’investis jamais l’argent de mon loyer, de mes courses ou de mon épargne de précaution.</div>
+</section>
+
+<section id="dettes" class="page">
+<h2>6. Gestion des dettes</h2>
+<p>Un crédit n’est pas forcément mauvais. Le problème, ce sont les crédits coûteux qui financent la consommation et réduisent ma capacité à épargner.</p>
+<div class="grid">
+<div class="card">
+<label>Capital restant dû (€)</label><input type="number" id="detteCapital" value="5000">
+<label>Taux annuel (%)</label><input type="number" id="detteTaux" value="12" step="0.1">
+<label>Mensualité (€)</label><input type="number" id="detteMensualite" value="200">
+<button onclick="calcDette()">Estimer le remboursement</button>
+</div>
+<div class="card"><div class="result" id="detteResult">Entrez les informations de votre crédit pour estimer sa durée et son coût.</div></div>
+</div>
+<div class="callout danger"><b>À éviter :</b> crédit renouvelable, crédit conso pour des achats de confort, découvert répété et financement d’un train de vie supérieur à mes revenus.</div>
+</section>
+
+<section id="plan" class="page">
+<h2>7. Mon plan sur 90 jours</h2>
+<p>Cochez vos actions. Votre progression est enregistrée automatiquement dans ce navigateur.</p>
+<div class="progress"><div id="barre"></div></div>
+<p><b>Progression :</b> <span id="pct">0%</span></p>
+<div id="checklist"></div>
+<button onclick="resetPlan()">Réinitialiser ma progression</button>
+</section>
+
+<section class="page" id="erreurs">
+<h2>8. Mes erreurs à éviter</h2>
+<div class="grid">
+<div class="card">Attendre d’avoir « assez d’argent » pour commencer.</div>
+<div class="card">Attendre le bon moment pour investir.</div>
+<div class="card">Tout mettre dans une seule action ou crypto.</div>
+<div class="card">Confondre trading actif et investissement long terme.</div>
+<div class="card">Investir l’argent du loyer ou des courses.</div>
+<div class="card">Vendre en panique lors d’une baisse.</div>
+<div class="card">Négliger les frais et la fiscalité.</div>
+<div class="card">Chercher des rendements élevés sans comprendre le risque.</div>
+</div>
+<p class="card" style="font-size:.85rem;color:#666">Note : les rendements utilisés sont des exemples pédagogiques. Les performances passées ne garantissent pas les performances futures. Ce site est un outil éducatif personnel et ne constitue pas un conseil en investissement personnalisé.</p>
+</section>
+
+</main>
+<footer>Ma Liberté Financière — cours, calculateurs et plan d’action personnel</footer>
+
+<script>
+const eur=n=>new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR'}).format(n);
+function v(id){return parseFloat(document.getElementById(id).value)||0}
+
+function showPage(id){
+document.querySelectorAll('section.page').forEach(s=>s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+document.querySelectorAll('#menu a').forEach(a=>a.classList.toggle('active',a.dataset.page===id));
+window.scrollTo({top:0,behavior:'smooth'});
+}
+document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>showPage(a.dataset.page)));
+
+function calcBudget(){
+const rev=v('rev'), fixes=v('loyer')+v('factures')+v('credits')+v('abos'), varr=v('variables');
+const dep=fixes+varr, cap=rev-dep;
+const c50=rev*.5,c30=rev*.3,c20=rev*.2;
+document.getElementById('budgetResult').innerHTML=
+`<b>Revenus :</b> ${eur(rev)}<br><b>Dépenses totales :</b> ${eur(dep)}<br><b>Capacité d’épargne :</b> <b>${eur(cap)}</b><br><b>Taux d’épargne :</b> ${rev?(cap/rev*100).toFixed(1):0}%<br>${cap>=c20?'✅ Vous atteignez déjà l’objectif de 20 % d’épargne.':'⚠️ Il vous manque '+eur(Math.max(0,c20-cap))+' pour atteindre 20 % d’épargne.'}`;
+document.getElementById('budgetTable').style.display='table';
+document.getElementById('c50').textContent=eur(c50);
+document.getElementById('c30').textContent=eur(c30);
+document.getElementById('c20').textContent=eur(c20);
+document.getElementById('r50').textContent=eur(fixes);
+document.getElementById('r30').textContent=eur(varr);
+document.getElementById('r20').textContent=eur(Math.max(0,cap));
+}
+
+function calcSecu(){
+const dep=v('depSecu'), m=parseFloat(document.getElementById('moisSecu').value), act=v('epargneActuelle'), mens=v('epargneMensuelle');
+const objectif=dep*m, reste=Math.max(0,objectif-act);
+const mois=mens>0?Math.ceil(reste/mens):Infinity;
+document.getElementById('secuResult').innerHTML=`<b>Objectif de sécurité :</b> ${eur(objectif)}<br><b>Déjà épargné :</b> ${eur(act)}<br><b>Reste à constituer :</b> <b>${eur(reste)}</b><br>${reste===0?'✅ Votre matelas de sécurité est atteint.':(mens>0?`<b>Temps estimé :</b> ${mois} mois à ${eur(mens)} par mois.`:'⚠️ Indiquez une épargne mensuelle supérieure à 0.')}`;
+}
+
+function calcInterets(){
+const c=v('capital'), m=v('versement'), r=v('rendement')/100, n=v('annees');
+let val=c, totalVerse=c;
+for(let i=0;i<n*12;i++){val=val*(1+r/12)+m;totalVerse+=m}
+document.getElementById('interetsResult').innerHTML=`<b>Capital final estimé :</b> ${eur(val)}<br><b>Total versé :</b> ${eur(totalVerse)}<br><b>Gains estimés :</b> <b>${eur(val-totalVerse)}</b><br><b>Durée :</b> ${n} ans au taux estimé de ${(r*100).toFixed(1)} % par an.`;
+}
+
+function calcDCA(){
+const m=v('dcaMontant'), p=v('dcaPrix'), n=v('dcaAnnees'), r=v('dcaRendement')/100;
+const total=m*12*n;
+let val=0;
+for(let i=0;i<n*12;i++){val=(val+m)*(1+r/12)}
+document.getElementById('dcaResult').innerHTML=`<b>Total versé sur ${n} ans :</b> ${eur(total)}<br><b>Parts achetées le premier mois :</b> ${(m/p).toFixed(2)}<br><b>Valeur finale estimée :</b> <b>${eur(val)}</b><br><b>Gain estimé :</b> ${eur(val-total)}<br><b>Stratégie :</b> verser ${eur(m)} chaque mois, sans essayer de timer le marché.`;
+}
+
+function calcDette(){
+const c=v('detteCapital'), taux=v('detteTaux')/100, mens=v('detteMensualite');
+const i=taux/12;
+if(mens<=c*i){document.getElementById('detteResult').innerHTML='⚠️ Votre mensualité ne couvre même pas les intérêts. Augmentez-la pour rembourser la dette.';return}
+let solde=c, mois=0, interets=0;
+while(solde>0&&mois<1200){const inte=solde*i;interets+=inte;solde=solde+inte-mens;mois++}
+document.getElementById('detteResult').innerHTML=`<b>Durée estimée :</b> ${mois} mois (${(mois/12).toFixed(1)} ans)<br><b>Coût total des intérêts :</b> <b>${eur(interets)}</b><br><b>Montant total remboursé :</b> ${eur(c+interets)}<br><b>Conseil :</b> remboursez d’abord les crédits au taux le plus élevé.`;
+}
+
+const actions=['Semaine 1 — Exporter mes 3 derniers relevés bancaires','Semaine 1 — Classer mes dépenses fixes, variables et abonnements','Semaine 1 — Calculer mon revenu net et ma capacité d’épargne','Semaine 1 — Identifier mes 3 plus grosses fuites d’argent','Semaine 2 — Supprimer les abonnements inutiles','Semaine 2 — Renégocier assurance, téléphone, internet ou énergie','Semaine 2 — Fixer un budget de plaisir raisonnable','Semaine 2 — Programmer un virement automatique vers mon livret','Semaine 3 — Ouvrir ou alimenter un Livret A / LDDS','Semaine 3 — Calculer mon objectif de matelas de sécurité','Semaine 3 — Programmer un versement mensuel automatique','Semaine 4 — Comparer plusieurs courtiers','Semaine 4 — Ouvrir un PEA','Semaine 4 — Choisir une allocation simple, par exemple un ETF Monde','Semaine 4 — Effectuer un premier versement, même symbolique','Mois 2 — Investir la même somme chaque mois','Mois 2 — Augmenter mon versement de 10 % si possible','Mois 3 — Continuer à rembourser les dettes coûteuses','Mois 3 — Suivre mon patrimoine une fois par mois'];
+document.getElementById('checklist').innerHTML=actions.map((a,i)=>`<div class="check" id="check${i}"><input type="checkbox" id="action${i}" onchange="savePlan()"><label for="action${i}">${a}</label></div>`).join('');
+function savePlan(){
+let done=0;
+actions.forEach((a,i)=>{const c=document.getElementById('action'+i).checked;localStorage.setItem('plan_'+i,c?'1':'0');document.getElementById('check'+i).classList.toggle('done',c);if(c)done++});
+const pct=Math.round(done/actions.length*100);
+document.getElementById('barre').style.width=pct+'%';
+document.getElementById('pct').textContent=pct+'%';
+}
+function resetPlan(){actions.forEach((a,i)=>localStorage.removeItem('plan_'+i));loadPlan()}
+function loadPlan(){actions.forEach((a,i)=>{document.getElementById('action'+i).checked=localStorage.getItem('plan_'+i)==='1'});savePlan()}
+loadPlan();
+</script>
+</body>
+</html>
